@@ -1,0 +1,12 @@
+<%= form_for([@day, @day.shifts.build]) do |f| %>
+    <p>
+        <%= f.label :hours %>
+        <br>
+        <%= f.text_field :hours %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+    
+    <% end %>

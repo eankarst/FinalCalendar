@@ -1,5 +1,28 @@
 <h1>Editing Day</h1>
 
 <%= render 'form' %>
+
+<h2>Shifts</h2>
+<% @day.shifts.each do |shift| %>
+    <p>
+        <strong>Hours:</strong>
+        <%=shift.hours %>
+    </p>
     
-    <%= link_to 'Back', days_path %>
+    <% end %>
+    
+<h2>Add a Shift</h2>
+<%= form_for([@day, @day.shifts.build]) do |f| %>
+    <p>
+        <%= f.label :hours %>
+        <br>
+        <%= f.text_field :hours %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+    
+    <% end %>
+    
+<%= link_to 'Back', days_path %>

@@ -20,14 +20,14 @@ class DaysController < ApplicationController
     def update
         @day = Day.find(params[:id])
         if @day.update(day_params)
-            redirect_to @day
+            redirect_to days_path
         else
             render 'edit'
         end
     end
     
     def show
-        @day = Day.find(params[:id])
+        @day = Day.find(params[:id]) rescue nil
     end
     
     def destroy
