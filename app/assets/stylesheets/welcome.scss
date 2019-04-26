@@ -4,3 +4,41 @@
 body {
     background-color: #a0c4ff;
 }
+linkbuttons a:link, 
+linkbuttons a:visited {
+    background-color: purple;
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+}
+
+linkbuttons a:hover,
+linkbuttons a:active {
+   background-color: #6D0062;
+}
+
+a.link-to-button {
+    background-color: #fc252d;
+    border: none;
+    color: #FFFFFF;
+    padding: .4em .6em;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+   box-shadow: 2px 2px 3px black;
+}
+
+a:hover.link-to-button {
+    background-color: #ce1219;
+}

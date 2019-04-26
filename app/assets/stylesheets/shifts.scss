@@ -1,8 +1,8 @@
 // Place all the styles related to the Shifts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#linkbuttons a:link, 
-#linkbuttons a:visited {
+.linkbuttons a:link, 
+.linkbuttons a:visited {
     background-color: purple;
     border: none;
     color: #FFFFFF;
@@ -16,7 +16,7 @@
    display: inline-block;
 }
 
-#linkbuttons a:hover,
-#linkbuttons a:active {
+.linkbuttons a:hover,
+.linkbuttons a:active {
    background-color: #6D0062;
 }

@@ -2,7 +2,9 @@
     <strong>Hours:</strong>
     <%= shift.hours %>
     
+
     <%= link_to 'Delete Shift', [shift.day, shift],
                 method: :delete,
-                data: { confirm: 'Are you sure?' } %>
+                data: { confirm: 'Are you sure?' },
+                class: 'link-to-button' %>
 </p>

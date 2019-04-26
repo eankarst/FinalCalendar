@@ -5,6 +5,7 @@ class ShiftsController < ApplicationController
         redirect_to edit_day_path(Day.find(params[:day_id]))
     end
     
+    
     def destroy
         @day = Day.find(params[:day_id])
         @shift = @day.shifts.find(params[:id])
