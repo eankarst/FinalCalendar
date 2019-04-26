@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_033532) do
+ActiveRecord::Schema.define(version: 2019_04_26_160948) do
 
   create_table "days", force: :cascade do |t|
     t.string "date"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2019_04_26_033532) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["day_id"], name: "index_shifts_on_day_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.integer "shift_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shift_id"], name: "index_users_on_shift_id"
   end
 
 end

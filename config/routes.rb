@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
   
   resources :days do
-    resources :shifts
+    resources :shifts do
+      resources :users
+    end
   end
   
   root 'welcome#index'
