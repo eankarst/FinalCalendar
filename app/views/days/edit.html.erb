@@ -1,5 +1,6 @@
-<h1>New Day</h1>
-<%= form_for :day, url: days_path do |f| %>
+<h1>Editing Day</h1>
+
+<%= form_for :day, url: day_path(@day), method: :patch do |f| %>
 
 <% if @day.errors.any? %>
     <div id="error_explanation">
@@ -9,22 +10,21 @@
         </h2>
         <ul>
             <% @day.errors.full_messages.each do |msg| %>
-            <li>
-                <%= msg %>
-            </li>
+            <li><%= msg %></li>
             <% end %>
         </ul>
     </div>
     <% end %>
-
-<p>
-    <%= f.label :date %>
-    <br>
-    <%= f.text_field :date %>
-</p>
-
-<p>
-    <%= f.submit %>
-</p>
-<% end %>
-<%= link_to 'Back', days_path %>
+    
+    <p>
+        <%= f.label :date %>
+        <br>
+        <%= f.text_field :date %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+    
+    <% end %>
+    
+    <%= link_to 'Back', days_path %>

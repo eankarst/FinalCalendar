@@ -1,0 +1,20 @@
+<h1>Listing Days</h1>
+<%= link_to 'New Day', new_day_path %>
+
+<table>
+    <tr>
+        <th>Day</th>
+    </tr>
+    
+    <% @days.each do |day| %>
+        <tr>
+            <td><%= day.date %></td>
+            <td><%= link_to 'Show', day_path(day) %></td>
+            <td><%= link_to 'Edit', edit_day_path(day) %></td>
+            <td><%= link_to 'Destroy',
+                                        day_path(day),
+                                        method: :delete,
+                                        data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+</table>
