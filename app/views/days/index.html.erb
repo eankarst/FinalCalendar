@@ -1,20 +1,850 @@
-<h1>Listing Days</h1>
-<%= link_to 'New Day', new_day_path %>
+<h1> Calendar for the Year 2019</h1></h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar</title>
+<style>
 
-<table>
-    <tr>
-        <th>Day</th>
-    </tr>
+
+table {
+
+	border: 1px solid black;
+	margin: 2em; padding 0px;
+	border-collapse: collapse;
+}
+td.DayOfWeek {
+	border: 1px solid black;
+	border-spacing: 0;
+	width: 15em;
+	height: 2em;
+	background-color: lightblue;
+	text-align: center;
+}
+td.DayNum {
+	border: 1px solid black;
+	background-color: white;
+	border-spacing: 0;
+	margin: 0; padding: 0px;
+	width: 15em;
+	height: 7em;
+	vertical-align: top;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+</style>
+</head>
+<body>
+
     
-    <% @days.each do |day| %>
-        <tr>
-            <td><%= day.date %></td>
-            <td><%= link_to 'Show', day_path(day) %></td>
-            <td><%= link_to 'Edit', edit_day_path(day) %></td>
-            <td><%= link_to 'Destroy',
-                                        day_path(day),
-                                        method: :delete,
-                                        data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-    <% end %>
+        
+        
+        <!--------------------------------------------------------------------------------------------------------------------------------------------->
+         <!--------------------------------------------------------------------------------------------------------------------------------------------->
+         
+         
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">January</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+  <td class="DayNum" style="background-color:#c7c9cc"></td>
+  <td class="DayNum" style="background-color:#c7c9cc"></td> 
+  <td class="DayNum" style="color:#FF0000;white-space:pre-wrap"><%= link_to '1', edit_day_path(@days[0])%></td>
+	<td class="DayNum" style="white-space:pre-wrap"><%= link_to '2', edit_day_path(@days[1]) %></td>
+  <td class="DayNum" style="white-space:pre-wrap"><%= link_to '3', edit_day_path(@days[2]) %></td>
+  <td class="DayNum" style="white-space:pre-wrap"><%= link_to '4', edit_day_path(@days[3]) %></td>
+	<td class="DayNum" style="white-space:pre-wrap"><%= link_to '5', edit_day_path(@days[0]) %></td>
+  </tr>
+  <tr>
+  <td class="DayNum">6</td>
+  <td class="DayNum">7</td> 
+  <td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+	<td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+  </tr>
+  <tr>
+    <td class="DayNum">13</td>
+    <td class="DayNum">14</td> 
+    <td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+	<td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+  </tr>
+  <tr>
+    <td class="DayNum">20</td>
+    <td class="DayNum" style = "color:#FF0000">21</td> 
+    <td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+	<td class="DayNum">24</td>
+	<td class="DayNum">25</td>
+	<td class="DayNum">26</td>
+  </tr>
+  <tr>
+    <td class="DayNum">27</td>
+    <td class="DayNum">28</td> 
+    <td class="DayNum">29</td>
+	<td class="DayNum">30</td>
+	<td class="DayNum">31</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
 </table>
+<br>
+<br>
+
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">Feburary</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum">1</td>
+	<td class="DayNum">2</td>
+  </tr>
+  <tr>
+    <td class="DayNum">3</td>
+    <td class="DayNum">4</td> 
+    <td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+	<td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+  </tr>
+  <tr>
+    <td class="DayNum">10</td>
+    <td class="DayNum">11</td> 
+    <td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+	<td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+  </tr>
+  <tr>
+    <td class="DayNum">17</td>
+    <td class="DayNum" style = "color:#FF0000">18</td> 
+    <td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+	<td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+  </tr>
+  <tr>
+    <td class="DayNum">24</td>
+    <td class="DayNum">25</td> 
+    <td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+	<td class="DayNum">28</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+         <!--------------------------------------------------------------------------------------------------------------------------------------------->
+         
+         
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">March</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum">1</td>
+	<td class="DayNum">2</td>
+  </tr>
+  <tr>
+    <td class="DayNum">3</td>
+    <td class="DayNum">4</td> 
+    <td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+	<td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+  </tr>
+  <tr>
+    <td class="DayNum">10</td>
+    <td class="DayNum">11</td> 
+    <td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+	<td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+  </tr>
+  <tr>
+    <td class="DayNum">17</td>
+    <td class="DayNum">18</td> 
+    <td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+	<td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+  </tr>
+  <tr>
+    <td class="DayNum">24</td>
+    <td class="DayNum">25</td> 
+    <td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+	<td class="DayNum">28</td>
+	<td class="DayNum">29</td>
+	<td class="DayNum">30</td>
+  </tr>
+  <tr>
+      <td class="DayNum" >31</td>
+      <td class="DayNum" style="background-color:#c7c9cc"></td>
+      <td class="DayNum" style="background-color:#c7c9cc"></td>
+      <td class="DayNum" style="background-color:#c7c9cc"></td>
+      <td class="DayNum" style="background-color:#c7c9cc"></td>
+      <td class="DayNum" style="background-color:#c7c9cc"></td>
+      <td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">April</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum">1</td> 
+    <td class="DayNum">2</td>
+	<td class="DayNum">3</td>
+	<td class="DayNum">4</td>
+	<td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+  </tr>
+  <tr>
+    <td class="DayNum">7</td>
+    <td class="DayNum">8</td> 
+    <td class="DayNum">9</td>
+	<td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+  </tr>
+  <tr>
+    <td class="DayNum">14</td>
+    <td class="DayNum">15</td> 
+    <td class="DayNum">16</td>
+	<td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+  </tr>
+  <tr>
+    <td class="DayNum">21</td>
+    <td class="DayNum">22</td> 
+    <td class="DayNum">23</td>
+	<td class="DayNum">24</td>
+	<td class="DayNum">25</td>
+	<td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+  </tr>
+  <tr>
+    <td class="DayNum">28</td>
+    <td class="DayNum">29</td> 
+    <td class="DayNum">30</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+         <!--------------------------------------------------------------------------------------------------------------------------------------------->
+         
+         
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">May</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum">1</td>
+	<td class="DayNum">2</td>
+	<td class="DayNum">3</td>
+	<td class="DayNum">4</td>
+  </tr>
+  <tr>
+    <td class="DayNum">5</td>
+    <td class="DayNum">6</td> 
+    <td class="DayNum">7</td>
+	<td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+	<td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+  </tr>
+  <tr>
+    <td class="DayNum">12</td>
+    <td class="DayNum">13</td> 
+    <td class="DayNum">14</td>
+	<td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+	<td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+  </tr>
+  <tr>
+    <td class="DayNum">19</td>
+    <td class="DayNum">20</td> 
+    <td class="DayNum">21</td>
+	<td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+	<td class="DayNum">24</td>
+	<td class="DayNum">25</td>
+  </tr>
+  <tr>
+    <td class="DayNum">26</td>
+    <td class="DayNum" style = "color:#FF0000">27</td> 
+    <td class="DayNum">28</td>
+	<td class="DayNum">29</td>
+	<td class="DayNum">30</td>
+	<td class="DayNum">31</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">June</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum">1</td>
+  </tr>
+  <tr>
+    <td class="DayNum">2</td>
+    <td class="DayNum">3</td> 
+    <td class="DayNum">4</td>
+	<td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+	<td class="DayNum">8</td>
+  </tr>
+  <tr>
+    <td class="DayNum">9</td>
+    <td class="DayNum">10</td> 
+    <td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+	<td class="DayNum">15</td>
+  </tr>
+  <tr>
+    <td class="DayNum">16</td>
+    <td class="DayNum">17</td> 
+    <td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+	<td class="DayNum">22</td>
+  </tr>
+  <tr>
+    <td class="DayNum">23</td>
+    <td class="DayNum">24</td> 
+    <td class="DayNum">25</td>
+	<td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+	<td class="DayNum">28</td>
+	<td class="DayNum">29</td>
+  </tr>
+  <tr>
+      <td class="DayNum">30</td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">July</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum">1</td> 
+    <td class="DayNum">2</td>
+	<td class="DayNum">3</td>
+	<td class="DayNum" style = "color:#FF0000">4</td>
+	<td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+  </tr>
+  <tr>
+    <td class="DayNum">7</td>
+    <td class="DayNum">8</td> 
+    <td class="DayNum">9</td>
+	<td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+  </tr>
+  <tr>
+    <td class="DayNum">14</td>
+    <td class="DayNum">15</td> 
+    <td class="DayNum">16</td>
+	<td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+  </tr>
+  <tr>
+    <td class="DayNum">21</td>
+    <td class="DayNum">22</td> 
+    <td class="DayNum">23</td>
+	<td class="DayNum">24</td>
+	<td class="DayNum">25</td>
+	<td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+  </tr>
+  <tr>
+    <td class="DayNum">28</td>
+    <td class="DayNum">29</td> 
+    <td class="DayNum">30</td>
+	<td class="DayNum">31</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">August</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum">1</td>
+	<td class="DayNum">2</td>
+	<td class="DayNum">3</td>
+  </tr>
+  <tr>
+    <td class="DayNum">4</td>
+    <td class="DayNum">5</td> 
+    <td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+	<td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+	<td class="DayNum">10</td>
+  </tr>
+  <tr>
+    <td class="DayNum">11</td>
+    <td class="DayNum">12</td> 
+    <td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+	<td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+	<td class="DayNum">17</td>
+  </tr>
+  <tr>
+    <td class="DayNum">18</td>
+    <td class="DayNum">19</td> 
+    <td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+	<td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+	<td class="DayNum">24</td>
+  </tr>
+  <tr>
+    <td class="DayNum">25</td>
+    <td class="DayNum">26</td> 
+    <td class="DayNum">27</td>
+	<td class="DayNum">28</td>
+	<td class="DayNum">29</td>
+	<td class="DayNum">30</td>
+	<td class="DayNum">31</td>
+  </tr>
+</table>
+<br>
+<br>
+
+
+<table style="width:85em;margin:1em auto">
+  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">September</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek"style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum">1</td>
+    <td class="DayNum" style = "color:#FF0000">2</td> 
+    <td class="DayNum">3</td>
+	<td class="DayNum">4</td>
+	<td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+  </tr>
+  <tr>
+    <td class="DayNum">8</td>
+    <td class="DayNum">9</td> 
+    <td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+  </tr>
+  <tr>
+    <td class="DayNum">15</td>
+    <td class="DayNum">16</td> 
+    <td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+  </tr>
+  <tr>
+    <td class="DayNum">22</td>
+    <td class="DayNum">23</td> 
+    <td class="DayNum">24</td>
+	<td class="DayNum">25</td>
+	<td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+	<td class="DayNum">28</td>
+  </tr>
+  <tr>
+    <td class="DayNum">29</td>
+    <td class="DayNum">30</td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+<table style="width:85em;margin:1em auto">  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">October</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">  Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum">1</td>
+	<td class="DayNum">2</td>
+	<td class="DayNum">3</td>
+	<td class="DayNum">4</td>
+	<td class="DayNum">5</td>
+  </tr>
+  <tr>
+    <td class="DayNum">6</td>
+    <td class="DayNum">7</td> 
+    <td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+	<td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+  </tr>
+  <tr>
+    <td class="DayNum">13</td>
+    <td class="DayNum" style = "color:#FF0000">14</td> 
+    <td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+	<td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+  </tr>
+  <tr>
+    <td class="DayNum">20</td>
+    <td class="DayNum">21</td> 
+    <td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+	<td class="DayNum">24</td>
+	<td class="DayNum">25</td>
+	<td class="DayNum">26</td>
+  </tr>
+  <tr>
+    <td class="DayNum">27</td>
+    <td class="DayNum">28</td> 
+    <td class="DayNum">29</td>
+	<td class="DayNum">30</td>
+	<td class="DayNum">31</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+<table style="width:85em;margin:1em auto">  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">November</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+    <td class="DayNum" style="background-color:#c7c9cc"></td> 
+    <td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum">1</td>
+	<td class="DayNum">2</td>
+  </tr>
+  <tr>
+    <td class="DayNum">3</td>
+    <td class="DayNum">4</td> 
+    <td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+	<td class="DayNum">8</td>
+	<td class="DayNum">9</td>
+  </tr>
+  <tr>
+    <td class="DayNum">10</td>
+    <td class="DayNum" style = "color:#FF0000">11</td> 
+    <td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+	<td class="DayNum">15</td>
+	<td class="DayNum">16</td>
+  </tr>
+  <tr>
+    <td class="DayNum">17</td>
+    <td class="DayNum">18</td> 
+    <td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+	<td class="DayNum">22</td>
+	<td class="DayNum">23</td>
+  </tr>
+  <tr>
+    <td class="DayNum">24</td>
+    <td class="DayNum">25</td> 
+    <td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+	<td class="DayNum" style = "color:#FF0000">28</td>
+	<td class="DayNum">29</td>
+	<td class="DayNum">30</td>
+  </tr>
+</table>
+<br>
+<br>
+
+ <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------->
+<table style="width:85em;margin:1em auto">  <tr>
+    <th colspan="7"style="background-color:#7194da;color:white;text-shadow: 1px 1px black;">December</th>
+  </tr>
+  <tr>
+    <td class="DayOfWeek" style = "color:#000000">Sunday</td>
+    <td class="DayOfWeek" style = "color:#000000">Monday</td> 
+    <td class="DayOfWeek" style = "color:#000000">Tuesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Wednesday</td>
+	<td class="DayOfWeek" style = "color:#000000">Thursday</td>
+	<td class="DayOfWeek" style = "color:#000000">Friday</td>
+	<td class="DayOfWeek" style = "color:#000000">Saturday</td>
+  </tr>
+  <!-- <tr onclick="document.location='DayViewExample.html'" style="cursor:pointer"> -->
+  <tr>
+    <td class="DayNum">1</td>
+    <td class="DayNum">2</td> 
+    <td class="DayNum">3</td>
+	<td class="DayNum">4</td>
+	<td class="DayNum">5</td>
+	<td class="DayNum">6</td>
+	<td class="DayNum">7</td>
+  </tr>
+  <tr>
+    <td class="DayNum">8</td>
+    <td class="DayNum">9</td> 
+    <td class="DayNum">10</td>
+	<td class="DayNum">11</td>
+	<td class="DayNum">12</td>
+	<td class="DayNum">13</td>
+	<td class="DayNum">14</td>
+  </tr>
+  <tr>
+    <td class="DayNum">15</td>
+    <td class="DayNum">16</td> 
+    <td class="DayNum">17</td>
+	<td class="DayNum">18</td>
+	<td class="DayNum">19</td>
+	<td class="DayNum">20</td>
+	<td class="DayNum">21</td>
+  </tr>
+  <tr>
+    <td class="DayNum">22</td>
+    <td class="DayNum">23</td> 
+    <td class="DayNum">24</td>
+	<td class="DayNum" style = "color:#FF0000">25</td>
+	<td class="DayNum">26</td>
+	<td class="DayNum">27</td>
+	<td class="DayNum">28</td>
+  </tr>
+  <tr>
+    <td class="DayNum">29</td>
+    <td class="DayNum">30</td> 
+    <td class="DayNum">31</td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+	<td class="DayNum" style="background-color:#c7c9cc"></td>
+  </tr>
+</table>
+<br>
+<br>
+
+</body>
+</html>
