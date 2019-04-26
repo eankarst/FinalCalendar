@@ -1,4 +1,8 @@
 <p>
     <strong>Hours:</strong>
-    <%= shift.hours 5>
+    <%= shift.hours %>
+    
+    <%= link_to 'Delete Shift', [shift.day, shift],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
 </p>
