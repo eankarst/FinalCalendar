@@ -8,6 +8,6 @@ Scenario: As a user I want to be able to navigate from the login screen to the s
  When I click on the "Calendar" link
  Then I should be on the "Calendar for the Year 2019" page
  When I click on the "1" link 
- Then I should be on the "TBD" page 
- And I should see the "TBD" field
- And I should see the "TBD" field
+ Then I should be on the "Editing Day" page 
+ And I should see the "Date" field
+ And I should see the "Hours" field
