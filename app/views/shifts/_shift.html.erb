@@ -2,7 +2,7 @@
     <strong>Hours:</strong>
     <%= shift.hours %>
     
-    <%= link_to 'Edit Shift', edit_day_shift_path(shift.day, shift) %>
+    <%= link_to 'Edit Shift', edit_day_shift_path(shift.day, shift), class: 'link-to-button' %>
     <%= link_to 'Delete Shift', [shift.day, shift],
                 method: :delete,
                 data: { confirm: 'Are you sure?' },

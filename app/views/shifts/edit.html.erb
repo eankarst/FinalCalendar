@@ -26,5 +26,29 @@
   </p>
  
 <% end %>
- 
-<%= link_to 'Back', edit_day_path %>
+
+<h2>Employees:</h2>
+<% @shift.day do |user| %>
+<%= user.fields_for(:user) do |users| %>
+<p>
+  <%= users.username %>
+</p>
+<% end %>
+<% end %>
+
+<h2>Add an Employee:</h2>
+<%= form_for(@shift.day) do |f| %>
+  <%= f.fields_for(:users) do |tf| %>
+<p>
+  <%= tf.label :name %>
+  <br>
+  <%= tf.text_field :username %>
+</p>
+<p>
+  <%= tf.submit %>
+<%= f.submit %>
+ </p>
+ <% end %>
+ <% end %>
+<%= link_to 'Back', edit_day_path(@shift.day) %>
+
