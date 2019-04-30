@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    for i in 10..20 do
+    for i in 0..10 do
       Day.create(:id => i)
     end
     puts "Done"
