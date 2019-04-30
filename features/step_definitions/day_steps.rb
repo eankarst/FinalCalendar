@@ -61,3 +61,5 @@ end
 Then("I should be on the  {string} page") do |string|
   expect(page).to have_no_content(string)
 end
+
+

@@ -36,7 +36,7 @@ td.DayNum {
 </head>
 <body>
 
-    
+    <%= link_to 'New Day', new_day_path %>
         
         
         <!--------------------------------------------------------------------------------------------------------------------------------------------->
@@ -60,11 +60,11 @@ td.DayNum {
   <tr>
   <td class="DayNum" style="background-color:#c7c9cc"></td>
   <td class="DayNum" style="background-color:#c7c9cc"></td> 
-  <td class="DayNum" style="color:#FF0000;white-space:pre-wrap"><%= link_to '1', edit_day_path(@days[0])%><br><% @days[0].shifts.each do |shift| %><%= shift.hours %><br><% end %></td>
-	<td class="DayNum" style="white-space:pre-wrap"><%= link_to '2', edit_day_path(@days[1])%><br><% @days[1].shifts.each do |shift| %><%= shift.hours %><br><% end %></td>
-  <td class="DayNum" style="white-space:pre-wrap"><%= link_to '3', edit_day_path(@days[2]) %></td>
-  <td class="DayNum" style="white-space:pre-wrap"><%= link_to '4', edit_day_path(@days[3]) %></td>
-	<td class="DayNum" style="white-space:pre-wrap"><%= link_to '5', edit_day_path(@days[0]) %></td>
+  <td class="DayNum" style="color:#FF0000;white-space:pre-wrap"><%= link_to '1', edit_day_path(@days[0]) rescue nil %><br><% @days[0].shifts.each do |shift| rescue nil %><%= shift.hours rescue nil%><br><% end %></td>
+	<td class="DayNum" style="white-space:pre-wrap"><%= link_to '2', edit_day_path(@days[1]) rescue nil %><br><% @days[1].shifts.each do |shift| %><%= shift.hours rescue nil%><br><% end %></td>
+  <td class="DayNum" style="white-space:pre-wrap"><%= link_to '3', edit_day_path(@days[2]) rescue nil%></td>
+  <td class="DayNum" style="white-space:pre-wrap"><%= link_to '4', edit_day_path(@days[3]) rescue nil %></td>
+	<td class="DayNum" style="white-space:pre-wrap"><%= link_to '5', edit_day_path(@days[10]) %></td>
   </tr>
   <tr>
   <td class="DayNum">6</td>
